@@ -36,8 +36,8 @@ python gh-dork.py -d dorks.txt -u molly                              # Search re
 python gh-dork.py -d dorks.txt -uf users.txt                         # Search repos of all users in the list
 python gh-dork.py -d dorks.txt -uf users.txt -vif valid_users.txt    # Search repos of all users in the list, filtering out nonexistent users
 python gh-dork.py -d dorks.txt -org github                           # Search repos of a specific organization
-python gh-dork.py -d dorks.txt -org github -vif valid_orgs.txt       # Search repos of a specific organization, filtering out nonexistent orgs
 python gh-dork.py -d dorks.txt -of orgs.txt                          # Search repos of all orgs in the list
+python gh-dork.py -d dorks.txt -of orgs.txt -vif valid_orgs.txt      # Search repos of all orgs in the list, filtering out nonexistent orgs
 python gh-dork.py -d dorks.txt -r molly/gh-dork                      # Search the specified repo
 python gh-dork.py -d dorks.txt -o results                            # Store results in files in the results/ directory, *overwriting any directory contents*
 ```
