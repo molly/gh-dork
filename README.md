@@ -17,7 +17,10 @@ All input files (dorks, users, or orgs) should be newline-separated.
 Clone the repository, then run
 `pip install -r requirements.txt`
 
-The only required parameter is the dorks file (`-d`). If an output directory is specified, a file will be created for
+The only required parameter is the dorks file (`-d`). See
+[techguan's github-dorks.txt](https://github.com/techgaun/github-dorks/blob/master/github-dorks.txt) for ideas.
+
+If an output directory is specified, a file will be created for
 each dork in the dorks list, and results will be saved there as well as printed. **Only use an empty/nonexistent
 directory or it will be cleared and its contents replaced.**
 
@@ -28,15 +31,15 @@ can also then be used as the input users/orgs file to speed up later script runs
 
 Example usage:
 ```
-python gh-dorkk.py -d dorks.txt                                       # Basic usage
-python gh-dorkk.py -d dorks.txt -u molly                              # Search repos of a specific user
-python gh-dorkk.py -d dorks.txt -uf users.txt                         # Search repos of all users in the list
-python gh-dorkk.py -d dorks.txt -uf users.txt -vif valid_users.txt    # Search repos of all users in the list, filtering out nonexistent users
-python gh-dorkk.py -d dorks.txt -org github                           # Search repos of a specific organization
-python gh-dorkk.py -d dorks.txt -org github -vif valid_orgs.txt       # Search repos of a specific organization, filtering out nonexistent orgs
-python gh-dorkk.py -d dorks.txt -of orgs.txt                          # Search repos of all orgs in the list
-python gh-dorkk.py -d dorks.txt -r molly/gh-dorkk                     # Search the specified repo
-python gh-dorkk.py -d dorks.txt -o results                            # Store results in files in the results/ directory, *overwriting any directory contents*
+python gh-dork.py -d dorks.txt                                       # Basic usage
+python gh-dork.py -d dorks.txt -u molly                              # Search repos of a specific user
+python gh-dork.py -d dorks.txt -uf users.txt                         # Search repos of all users in the list
+python gh-dork.py -d dorks.txt -uf users.txt -vif valid_users.txt    # Search repos of all users in the list, filtering out nonexistent users
+python gh-dork.py -d dorks.txt -org github                           # Search repos of a specific organization
+python gh-dork.py -d dorks.txt -org github -vif valid_orgs.txt       # Search repos of a specific organization, filtering out nonexistent orgs
+python gh-dork.py -d dorks.txt -of orgs.txt                          # Search repos of all orgs in the list
+python gh-dork.py -d dorks.txt -r molly/gh-dork                      # Search the specified repo
+python gh-dork.py -d dorks.txt -o results                            # Store results in files in the results/ directory, *overwriting any directory contents*
 ```
 
 ## Authentication
@@ -51,4 +54,4 @@ If no credentials are provided or if credentials are invalid, the script will st
 [much lower rate limits](https://docs.github.com/en/rest/reference/search) for unauthenticated users.
 
 ## Credits
-Loosely based on [techgaun/github-dorks](https://github.com/techgaun/github-dorks)
+Loosely based on [techgaun/github-dorks](https://github.com/techgaun/github-dorks).

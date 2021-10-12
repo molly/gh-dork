@@ -78,9 +78,7 @@ class Dorker:
                 return filename_base + uniq + ".txt"
 
     def handle_rate_limit(self, resource="core"):
-        """Swaps out current client for one that hasn't been rate limited yet if available, or else the one rate limited
-        least recently. If all clients are rate limit, this will sleep until the least recently rate limited client is
-        available."""
+        """Sleep until the relevant rate limit resets."""
         rate_limit_resp = self.gh["client"].rate_limit()
         rate_limit_reset = rate_limit_resp["resources"][resource]["reset"]
         self.gh["reset"][resource] = rate_limit_reset
